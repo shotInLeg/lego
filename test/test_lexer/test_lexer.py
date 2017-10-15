@@ -13,52 +13,29 @@ class TestLexer(TestCase):
 
         dataset = [
             'let',  # lkeyword
-
-            'a',  # lname
-            'aA1',  # lname
-
-            '+',  # loperation
-            '+=',  # loperation
-
+            'a', 'aA1',  # lname
+            '+', '+=',  # loperation
             'if',  # loperator
-
-            'A',  # ltype
-            'AbAc',  # ltype
-            'Ab(Ac, Ad)',  # ltype
-            'Ab<Bc>',  # ltype
-
-            '1',  # lvalue
-            '12',  # lvalue
-            '1_000',  # lvalue
-            '12.14',  # lvalue
-            '"qwerty"'  # lvalue
+            'A', 'AbAc', 'Ab(Ac, Ad)', 'Ab<Bc>',  # ltype
+            '1', '12', '1_000', '12.14', '"qwerty"'  # lvalue
         ]
 
         actual = [
-            'lkeyword'
-            'lname',
-            'lname',
-            'loperation',
-            'loperation',
+            'lkeyword',
+            'lname', 'lname',
+            'loperation', 'loperation',
             'loperator',
-            'ltype',
-            'ltype',
-            'ltype',
-            'ltype',
-            'lvalue',
-            'lvalue',
-            'lvalue',
-            'lvalue',
-            'lvalue',
+            'ltype', 'ltype', 'ltype', 'ltype',
+            'lvalue', 'lvalue', 'lvalue', 'lvalue', 'lvalue'
         ]
 
         current = []
         for i, item in enumerate(dataset):
-            current.append(('lexername', 0))
+            current.append('lexername')
             item_matches = []
             for reg in regexp:
                 if reg.match(item):
                     item_matches.append(regexp[reg])
                     current[i] = max(item_matches)[0]
 
-        self.assertEqual(actual, current)
+        self.assertEquals(actual, current)
