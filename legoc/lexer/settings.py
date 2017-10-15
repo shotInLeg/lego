@@ -1,5 +1,7 @@
 import re
 
+from legoc.lexer.types import *
+
 lkeyword_priority = 6
 loperator_priority = 5
 loperation_priority = 4
@@ -52,4 +54,14 @@ regexp = {
     re.compile(r'^[0-9]+[0-9]$'): ('lvalue', lvalue_priority),  # number
     re.compile(r'^[0-9]$'): ('lvalue', lvalue_priority),  # number
     re.compile(r'^\".*\"$'): ('lvalue', lvalue_priority),  # string
+}
+
+
+ltypes = {
+    'lkeyword': LKeywordType,
+    'lname': LNameType,
+    'loperation': LOperationType,
+    'loperator': LOperatorType,
+    'ltype': LTypeType,
+    'lvalue': LValueType
 }
