@@ -34,6 +34,12 @@ regexp = {
     re.compile(r'^[*][=]$'): ('loperation', loperation_priority),
     re.compile(r'^[/][=]$'): ('loperation', loperation_priority),
     re.compile(r'^[%][=]$'): ('loperation', loperation_priority),
+    re.compile(r'^[(]$'): ('loperation', loperation_priority),
+    re.compile(r'^[)]$'): ('loperation', loperation_priority),
+    re.compile(r'^[[]$'): ('loperation', loperation_priority),
+    re.compile(r'^[]]$'): ('loperation', loperation_priority),
+    re.compile(r'^[{]$'): ('loperation', loperation_priority),
+    re.compile(r'^[}]$'): ('loperation', loperation_priority),
     re.compile(r'^in$'): ('loperation', loperation_priority),
     re.compile(r'^is$'): ('loperation', loperation_priority),
 
@@ -42,7 +48,7 @@ regexp = {
     re.compile(r'^else$'): ('loperator', loperator_priority),
     re.compile(r'^while$'): ('loperator', loperator_priority),
     re.compile(r'^for$'): ('loperator', loperator_priority),
-    re.compile(r'^do'): ('loperator', loperator_priority),
+    re.compile(r'^do$'): ('loperator', loperator_priority),
     re.compile(r'^return$'): ('loperator', loperator_priority),
 
     re.compile(r'^[A-Z][A-Za-z0-9_<>]+$'): ('ltype', ltype_priority),

@@ -11,16 +11,24 @@ class Lexer(object):
                 line = line.replace('\r', ' ')
 
                 token = ''
+                token_type = None
                 for c in line:
                     new_token = token + c
-                    token_type = self.get_token_type(new_token)
+                    new_token_type = self.get_token_type(new_token)
 
-                    if c == ' ' or token_type is None:
-                        tokens.append(self.get_token_type(token))
+                    if c == ' ' and token_type is not None:
+                        tokens.append(token_type)
+                        token = ''
+                        token_type = None
+
+                    elif new_token_type is None and token_type is not None:
+                        tokens.append(token_type)
                         token = c
+                        token_type = self.get_token_type(token)
 
                     else:
                         token = new_token
+                        token_type = self.get_token_type(token)
 
         return tokens
 
@@ -40,5 +48,5 @@ class Lexer(object):
                 token_type_name = max(token_matches)[0]
 
         if token_type_name:
-            return ltypes[token_type_name]
+            return ltypes[token_type_name](token)
         return None
