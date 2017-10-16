@@ -2,10 +2,11 @@ import re
 
 from legoc.lexer.types import *
 
-lkeyword_priority = 6
-loperator_priority = 5
-loperation_priority = 4
-ltype_priority = 3
+lkeyword_priority = 7
+loperator_priority = 6
+loperation_priority = 5
+ltype_priority = 4
+lbracket_priority = 3
 lvalue_priority = 2
 lname_priority = 1
 
@@ -34,14 +35,17 @@ regexp = {
     re.compile(r'^[*][=]$'): ('loperation', loperation_priority),
     re.compile(r'^[/][=]$'): ('loperation', loperation_priority),
     re.compile(r'^[%][=]$'): ('loperation', loperation_priority),
-    re.compile(r'^[(]$'): ('loperation', loperation_priority),
-    re.compile(r'^[)]$'): ('loperation', loperation_priority),
-    re.compile(r'^[[]$'): ('loperation', loperation_priority),
-    re.compile(r'^[]]$'): ('loperation', loperation_priority),
-    re.compile(r'^[{]$'): ('loperation', loperation_priority),
-    re.compile(r'^[}]$'): ('loperation', loperation_priority),
     re.compile(r'^in$'): ('loperation', loperation_priority),
     re.compile(r'^is$'): ('loperation', loperation_priority),
+
+    re.compile(r'^[\(]$'): ('lopen_bracket', lbracket_priority),
+    re.compile(r'^[\)]$'): ('lclose_bracket', lbracket_priority),
+    re.compile(r'^[\[]$'): ('lopen_bracket', lbracket_priority),
+    re.compile(r'^[\]]$'): ('lclose_bracket', lbracket_priority),
+    re.compile(r'^[\{]$'): ('lopen_bracket', lbracket_priority),
+    re.compile(r'^[\}]$'): ('lclose_bracket', lbracket_priority),
+    re.compile(r'^[\<]$'): ('lopen_bracket', lbracket_priority),
+    re.compile(r'^[\>]$'): ('lclose_bracket', lbracket_priority),
 
     re.compile(r'^if$'): ('loperator', loperator_priority),
     re.compile(r'^elif$'): ('loperator', loperator_priority),
@@ -69,5 +73,7 @@ ltypes = {
     'loperation': LOperationType,
     'loperator': LOperatorType,
     'ltype': LTypeType,
+    'lopen_bracket': LOpenBracketType,
+    'lclose_bracket': LCloseBracketType,
     'lvalue': LValueType
 }
