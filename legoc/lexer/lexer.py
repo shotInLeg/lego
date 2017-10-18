@@ -9,6 +9,7 @@ class Lexer(object):
             for line in legofile:
                 line = line.replace('\n', ' ')
                 line = line.replace('\r', ' ')
+                line = line.replace('  ', ' ')
 
                 token = ''
                 token_type = None
@@ -17,12 +18,12 @@ class Lexer(object):
                     new_token_type = self.get_token_type(new_token)
 
                     if c == ' ' and token_type is not None:
-                        tokens.append(token_type)
+                        tokens.append(token_type(token))
                         token = ''
                         token_type = None
 
                     elif new_token_type is None and token_type is not None:
-                        tokens.append(token_type)
+                        tokens.append(token_type(token))
                         token = c
                         token_type = self.get_token_type(token)
 
@@ -48,5 +49,5 @@ class Lexer(object):
                 token_type_name = max(token_matches)[0]
 
         if token_type_name:
-            return ltypes[token_type_name](token)
+            return ltypes[token_type_name]
         return None

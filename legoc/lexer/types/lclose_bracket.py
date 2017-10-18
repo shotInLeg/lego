@@ -4,7 +4,7 @@ from legoc.lexer.types.lbracket import LBracketType
 class LCloseBracketType(LBracketType):
     def __init__(self, lexem):
         super(LCloseBracketType, self).__init__(lexem)
-        self._type = 'LCloseBracketType'
+        self.type_name = 'LCloseBracketType'
 
-        self._current_number = LBracketType.number
-        LBracketType.number -= 1
+        pair = self.get_pair_by_one(self.str_value)
+        self.current_number = LBracketType.numbers[pair].pop()

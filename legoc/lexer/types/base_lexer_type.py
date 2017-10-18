@@ -1,11 +1,13 @@
 class BaseLexerType(object):
     def __init__(self, lexem):
-        self._type = 'BaseLexerType'
-        self._str_view = lexem
+        self.type_name = 'BaseLexerType'
+        self.str_value = lexem
 
     def __str__(self):
-        return '{{{}:{}}}'.format(self._type, self._str_view)
+        return '{{{}:{}}}'.format(
+            self.type_name, self.str_value
+        )
 
     def __eq__(self, b):
-        return self._type == b._type and \
-               self._str_view == b._str_view
+        return self.type_name == b.type_name and \
+               self.str_value == b.str_value
