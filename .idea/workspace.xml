@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba7b8189-8f79-4fbe-8c79-847ffdbcc3c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/lexer.py" afterPath="$PROJECT_DIR$/legoc/lexer/lexer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lkeyword.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lkeyword.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lname.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lname.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/loperation.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/loperation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/loperator.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/loperator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/ltype.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/ltype.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/types/lvalue.py" afterPath="$PROJECT_DIR$/legoc/lexer/types/lvalue.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/test_lexer.py" afterPath="$PROJECT_DIR$/test/test_lexer/test_lexer.py" />
@@ -85,8 +74,8 @@
       <file leaf-file-name="test_lexer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_lexer/test_lexer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -174,10 +163,10 @@
         <option value="$PROJECT_DIR$/legoc/lexer/types/lvalue.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/lexer.py" />
-        <option value="$PROJECT_DIR$/test/test_lexer/test_lexer.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py" />
+        <option value="$PROJECT_DIR$/test/test_lexer/test_lexer.py" />
       </list>
     </option>
   </component>
@@ -370,10 +359,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="978" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -556,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_lexer/test_lexer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
