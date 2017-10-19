@@ -1,0 +1,7 @@
+cnst
+priv
+prot
+publ
+read
+write
+clr

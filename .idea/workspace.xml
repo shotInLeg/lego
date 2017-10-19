@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba7b8189-8f79-4fbe-8c79-847ffdbcc3c9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_keywords.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_names.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operations.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operators.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_types.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_values.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/lexer.py" afterPath="$PROJECT_DIR$/legoc/lexer/lexer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/settings.py" afterPath="$PROJECT_DIR$/legoc/lexer/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt" afterPath="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_lexer/test_lexer.py" afterPath="$PROJECT_DIR$/test/test_lexer/test_lexer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,67 +23,15 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/lego$Unittests_for_test_lexer_TestLexer_test_regexp.coverage" NAME="Unittests for test_lexer.TestLexer.test_regexp Coverage Results" MODIFIED="1508089455521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_lexer" />
-    <SUITE FILE_PATH="coverage/lego$Unittests_in_test_lexer_py.coverage" NAME="Unittests in test_lexer.py Coverage Results" MODIFIED="1508361106413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_lexer" />
+    <SUITE FILE_PATH="coverage/lego$Unittests_in_test_lexer_py.coverage" NAME="Unittests in test_lexer.py Coverage Results" MODIFIED="1508443849671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_lexer" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base_lexer_type.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lbracket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lbracket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lopen_bracket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lclose_bracket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lexer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/lexer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_lexer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_lexer/test_lexer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+            <state relative-caret-position="1245">
+              <caret line="194" column="23" lean-forward="false" selection-start-line="194" selection-start-column="23" selection-end-line="194" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -83,41 +39,93 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lname.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lname.py">
+      <file leaf-file-name="test_keywords.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_keywords.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loperator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/loperator.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ltype.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/ltype.py">
+      <file leaf-file-name="test_brackets.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lvalue.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lvalue.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="224">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_names.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_names.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_operations.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operations.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_values.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_values.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_types.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_types.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_operators.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operators.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,6 +145,7 @@
       <find>'loperation',</find>
       <find>: 'loperation',</find>
       <find>: 'lvalue',</find>
+      <find>$'): ('lkeyword', lkeyword_priority),</find>
     </findStrings>
     <replaceStrings>
       <replace>: ('lvalue', lvalue_priority),</replace>
@@ -153,8 +162,6 @@
         <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lleft_bracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/lexer/settings.py" />
-        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lkeyword.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lname.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/loperation.py" />
@@ -162,10 +169,19 @@
         <option value="$PROJECT_DIR$/legoc/lexer/types/ltype.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lvalue.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py" />
-        <option value="$PROJECT_DIR$/legoc/lexer/lexer.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py" />
+        <option value="$PROJECT_DIR$/legoc/lexer/lexer.py" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operation.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_values.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_types.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operators.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operations.txt" />
+        <option value="$PROJECT_DIR$/legoc/lexer/settings.py" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_names.txt" />
+        <option value="$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_keywords.txt" />
         <option value="$PROJECT_DIR$/test/test_lexer/test_lexer.py" />
       </list>
     </option>
@@ -221,6 +237,12 @@
               <item name="legoc" type="462c0819:PsiDirectoryNode" />
               <item name="lexer" type="462c0819:PsiDirectoryNode" />
               <item name="types" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
+              <item name="legoc" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lego" type="b2602c69:ProjectViewProjectNode" />
@@ -326,34 +348,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 49m 10s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 43m 24s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 49m 17s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 43m 39s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 49m 31s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 44m 08s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 49m 51s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 49m 20s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 50m 57s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 52m 47s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 51m 12s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 22h 59m 36s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.18 at 23h 51m 50s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 23h 01m 43s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 00h 09m 08s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 23h 02m 37s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 00h 11m 41s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 23h 07m 09s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 00h 11m 46s.xml">
+    <history-entry file="Unittests_in_test_lexer_py - 2017.10.19 at 23h 10m 50s.xml">
       <configuration name="Unittests in test_lexer.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -363,7 +385,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38631347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -415,34 +437,8 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="35" column="62" lean-forward="true" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,24 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lname.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/lexer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -544,10 +522,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lname.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_spaces.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/lexer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_values.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_types.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operators.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_operations.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_brackets.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_names.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_lexer/lexer_run_test_files/test_keywords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_lexer/test_lexer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+        <state relative-caret-position="1245">
+          <caret line="194" column="23" lean-forward="false" selection-start-line="194" selection-start-column="23" selection-end-line="194" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
