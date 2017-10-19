@@ -28,7 +28,7 @@ class Lexer(object):
                         token_type = self.get_token_type(token)
 
                     else:
-                        token = new_token
+                        token = new_token.lstrip(' ')
                         token_type = self.get_token_type(token)
 
         return tokens
