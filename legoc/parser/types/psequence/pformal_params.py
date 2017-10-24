@@ -1,7 +1,7 @@
-from legoc.parser.types.base_parser_type import BaseParserType
+from legoc.parser.types.psequence.pparams import PParams
 
 
-class PFormalParamList(BaseParserType):
+class PFormalParams(PParams):
     def __init__(self):
-        super(PFormalParamList, self).__init__('')
-        self.type_name = 'PFormalParamList'
+        super(PFormalParams, self).__init__()
+        self.type_name = 'PFormalParams'

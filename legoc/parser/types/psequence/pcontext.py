@@ -1,9 +1,9 @@
-from legoc.parser.types.base_parser_type import BaseParserType
+from legoc.parser.types.psequence.psequence import PSequence
 
 
-class PContextObject(BaseParserType):
+class PContext(PSequence):
     def __init__(self):
-        super(PContextObject, self).__init__('')
+        super(PContext, self).__init__()
         self.type_name = 'PContext'
 
         self.lst = []
