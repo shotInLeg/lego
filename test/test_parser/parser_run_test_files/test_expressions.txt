@@ -1,0 +1,4 @@
+lstLst = [[1, 2], [1, 3]];
+lstName = [a, b];
+lstOne = [5];
+lstLstOne = [[5]];
