@@ -6,3 +6,5 @@ class PRValue(PValue):
         super(PRValue, self).__init__(lexem)
         self.type_name = 'PRValue'
         self.complete = True
+
+        self.type = None

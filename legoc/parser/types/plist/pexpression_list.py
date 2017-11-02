@@ -7,112 +7,35 @@ class PExpressionList(PValueList):
         self.type_name = 'PExpressionList'
 
     @staticmethod
-    def von(val1, oper, name1):
+    def vov(val1, oper, val2):
         self = PExpressionList()
 
+        if val1.type_name == 'PExpression':
+            self.lst.append(val1.child)
+        else:
+            self.lst.append(val1)
+
+        if val2.type_name == 'PExpression':
+            self.lst.append(val2.child)
+        else:
+            self.lst.append(val2)
+
+        return self
+
+    @staticmethod
+    def eov(expr_list, oper, val2):
+        self = PExpressionList()
+        for item in expr_list.lst:
+            self.lst.append(item)
+        self.lst.append(val2)
+        return self
+
+    @staticmethod
+    def voe(val1, oper, expr_list):
+        self = PExpressionList()
         self.lst.append(val1)
-        self.lst.append(name1)
-
-        return self
-
-    @staticmethod
-    def nov(name1, oper, val1):
-        self = PExpressionList()
-
-        self.lst.append(name1)
-        self.lst.append(val1)
-
-        return self
-
-    @staticmethod
-    def eov(expr, oper, val1):
-        self = PExpressionList()
-
-        self.lst.append(expr.child)
-        self.lst.append(val1)
-
-        return self
-
-    @staticmethod
-    def eon(expr, oper, name1):
-        self = PExpressionList()
-
-        self.lst.append(expr.child)
-        self.lst.append(name1)
-
-        return self
-
-    @staticmethod
-    def voe(val1, oper, expr):
-        self = PExpressionList()
-
-        self.lst.append(val1)
-        self.lst.append(expr.child)
-
-        return self
-
-    @staticmethod
-    def noe(name1, oper, expr):
-        self = PExpressionList()
-
-        self.lst.append(name1)
-        self.lst.append(expr.child)
-
-        return self
-
-    @staticmethod
-    def eol(expr, oper, list1):
-        self = PExpressionList()
-
-        self.lst.append(expr.child)
-        self.lst.extend(list1.lst)
-
-        return self
-
-    @staticmethod
-    def loe(list1, oper, expr):
-        self = PExpressionList()
-
-        self.lst.extend(list1.lst)
-        self.lst.append(expr.child)
-
-        return self
-
-    @staticmethod
-    def nlov(nlist1, oper, val1):
-        self = PExpressionList()
-
-        self.lst.extend(nlist1.lst)
-        self.lst.append(val1)
-
-        return self
-
-    @staticmethod
-    def elov(elist1, oper, val1):
-        elist1.lst.append(val1)
-        return elist1
-
-    @staticmethod
-    def elon(elist1, oper, name1):
-        elist1.lst.append(name1)
-        return elist1
-
-    @staticmethod
-    def voel(val1, oper, elist1):
-        self = PExpressionList()
-
-        self.lst.append(val1)
-        self.lst.extend(elist1.lst)
-
-        return self
-
-    @staticmethod
-    def noel(name1, oper, elist1):
-        self = PExpressionList()
-
-        self.lst.append(name1)
-        self.lst.extend(elist1.lst)
-
+        for item in expr_list.lst:
+            self.lst.append(item)
         return self
 
     def __str__(self):

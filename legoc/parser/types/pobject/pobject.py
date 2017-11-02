@@ -1,7 +1,7 @@
-from legoc.parser.types.pvalue.plvalue import PLValue
+from legoc.parser.types.pvalue.prvalue import PRValue
 
 
-class PObject(PLValue):
+class PObject(PRValue):
     def __init__(self):
         super(PObject, self).__init__('')
         self.type_name = 'PObject'

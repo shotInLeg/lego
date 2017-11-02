@@ -8,3 +8,16 @@ class PInstruction(BaseParserType):
         self.complete = True
 
         self.child = None
+
+    @staticmethod
+    def bo(some, opr):
+        inst = PInstruction()
+        if some.type_name == 'PExpression':
+            inst.child = some.child
+        else:
+            inst.child = some
+
+        return inst
+
+    def __str__(self):
+        return '{{{} {}}}'.format(self.type_name, self.child)
