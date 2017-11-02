@@ -2,7 +2,7 @@
 from legoc.parser.types import *
 
 
-class GrammarRegexp(object):
+class GrammarRule(object):
     def __init__(self, *tpl):
         self.tpl = tuple([x for x in tpl])
         self.current_index = -1
@@ -33,7 +33,7 @@ class GrammarRegexp(object):
         return self.tpl.__hash__()
 
     def __eq__(self, other):
-        if type(other) == GrammarRegexp:
+        if type(other) == GrammarRule:
             if len(self) != len(other):
                 return False
 
