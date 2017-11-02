@@ -8,7 +8,7 @@ loperator_priority = 6
 loperation_priority = 5
 ltype_priority = 4
 lbracket_priority = 3
-lvalue_priority = 2
+lconstant_priority = 2
 lname_priority = 1
 
 
@@ -48,6 +48,7 @@ regexp = {
     re.compile(r'^[-][-][=]$'): ('loperation', loperation_priority),
     re.compile(r'^[-][>]$'): ('loperation', loperation_priority),
     re.compile(r'^[.]$'): ('loperation', loperation_priority),
+    re.compile(r'^[:]$'): ('loperation', loperation_priority),
     re.compile(r'^in$'): ('loperation', loperation_priority),
     re.compile(r'^is$'): ('loperation', loperation_priority),
 
@@ -83,25 +84,25 @@ regexp = {
     re.compile(r'^[T][_][A-Z0-9][A-Za-z0-9]+$'): ('ltype', ltype_priority),
 
     re.compile(r'^[0-9]$'):
-        ('lvalue', lvalue_priority),  # number (1)
+        ('lconstant', lconstant_priority),  # number (1)
     re.compile(r'^([0-9][_]?)+$'):
-        ('lvalue', lvalue_priority),  # number (1_0)
+        ('lconstant', lconstant_priority),  # number (1_0)
     re.compile(r'^([0-9][_]?)+[.]([0-9][_]?)+$'):
-        ('lvalue', lvalue_priority),  # number (1_000.000_23)
+        ('lconstant', lconstant_priority),  # number (1_000.000_23)
     re.compile(r'^([0-9][_]?)+[.]$'):
-        ('lvalue', lvalue_priority),  # number (1_000.)
+        ('lconstant', lconstant_priority),  # number (1_000.)
 
-    re.compile(r'^\".*\"$'): ('lvalue', lvalue_priority),  # string
+    re.compile(r'^\".*\"$'): ('lconstant', lconstant_priority),  # string
 }
 
 
 ltypes = {
-    'lkeyword': LKeywordType,
-    'lname': LNameType,
-    'loperation': LOperationType,
-    'loperator': LOperatorType,
-    'ltype': LTypeType,
-    'lopen_bracket': LOpenBracketType,
-    'lclose_bracket': LCloseBracketType,
-    'lvalue': LValueType
+    'lkeyword': LKeyword,
+    'lname': LName,
+    'loperation': LOperation,
+    'loperator': LOperator,
+    'ltype': LType,
+    'lopen_bracket': LOpenBracket,
+    'lclose_bracket': LCloseBracket,
+    'lconstant': LConstant
 }

@@ -1,11 +1,11 @@
-from legoc.lexer.types.lbracket import LBracketType
+from legoc.lexer.types.lbracket import LBracket
 
 
-class LOpenBracketType(LBracketType):
+class LOpenBracket(LBracket):
     def __init__(self, lexem):
-        super(LOpenBracketType, self).__init__(lexem)
-        self.type_name = 'LOpenBracketType'
+        super(LOpenBracket, self).__init__(lexem)
+        self.type_name = 'LOpenBracket'
 
         self.current_number = self.get_next_index()
         pair = self.get_pair_by_one(self.str_value)
-        LBracketType.numbers[pair].append(self.current_number)
+        LOpenBracket.numbers[pair].append(self.current_number)

@@ -1,10 +1,10 @@
-from legoc.lexer.types.lbracket import LBracketType
+from legoc.lexer.types.lbracket import LBracket
 
 
-class LCloseBracketType(LBracketType):
+class LCloseBracket(LBracket):
     def __init__(self, lexem):
-        super(LCloseBracketType, self).__init__(lexem)
-        self.type_name = 'LCloseBracketType'
+        super(LCloseBracket, self).__init__(lexem)
+        self.type_name = 'LCloseBracket'
 
         pair = self.get_pair_by_one(self.str_value)
-        self.current_number = LBracketType.numbers[pair].pop()
+        self.current_number = LBracket.numbers[pair].pop()

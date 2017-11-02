@@ -1,7 +1,7 @@
 from legoc.lexer.types.base_lexer_type import BaseLexerType
 
 
-class LOperatorType(BaseLexerType):
+class LOperator(BaseLexerType):
     def __init__(self, lexem):
-        super(LOperatorType, self).__init__(lexem)
-        self.type_name = 'LOperatorType'
+        super(LOperator, self).__init__(lexem)
+        self.type_name = 'LOperator'

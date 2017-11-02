@@ -1,7 +1,7 @@
 from legoc.lexer.types.base_lexer_type import BaseLexerType
 
 
-class LBracketType(BaseLexerType):
+class LBracket(BaseLexerType):
     numbers = {
         '()': [],
         '{}': [],
@@ -12,8 +12,8 @@ class LBracketType(BaseLexerType):
     max_index = 0
 
     def __init__(self, lexem):
-        super(LBracketType, self).__init__(lexem)
-        self.type_name = 'LBracketType'
+        super(LBracket, self).__init__(lexem)
+        self.type_name = 'LBracket'
         self.current_number = 0
 
     def __str__(self):
