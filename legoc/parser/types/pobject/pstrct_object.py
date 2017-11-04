@@ -1,41 +1,31 @@
-from legoc.parser.types.base_parser_type import BaseParserType
+from legoc.parser.types.pobject.pcontainer import PContainer
 from legoc.parser.types.ptype.psimple_type import PSimpleType
 
 
-class PStrctObject(BaseParserType):
+class PStrctObject(PContainer):
     def __init__(self):
-        super(PStrctObject, self).__init__('')
+        super(PStrctObject, self).__init__()
         self.type_name = 'PStrctObject'
         self.complete = True
 
         self.type = PSimpleType('Strct')
-        self.lst = []
 
-    @staticmethod
-    def bab(obr, asgn, cbr):
-        vctr = PStrctObject()
+    @classmethod
+    def b_o_b(cls, *_):
+        self = cls()
+        return self
 
-        return vctr
+    @classmethod
+    def b_item_b(cls, ob, val1, cb):
+        self = cls()
+        self.lst.append(val1)
+        return self
 
-    @staticmethod
-    def bdb(obr, def1, cbr):
-        vctr = PStrctObject()
-        vctr.lst.append(def1)
+    @classmethod
+    def b_itemlist_b(cls, obr, item_lst, cbr):
+        self = cls()
 
-        return vctr
+        for item in item_lst.lst:
+            self.lst.append(item)
 
-    @staticmethod
-    def bdlb(obr, def_lst, cbr):
-        vctr = PStrctObject()
-
-        for item in def_lst.lst:
-            vctr.lst.append(item)
-
-        return vctr
-
-    def __str__(self):
-        return '{{{} {} [{}]}}'.format(
-            self.type_name,
-            self.type,
-            ', '.join([str(x) for x in self.lst])
-        )
+        return self

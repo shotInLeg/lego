@@ -6,14 +6,9 @@ class PTemplateType(PComplexType):
         super(PTemplateType, self).__init__(lexem)
         self.type_name = 'PTemplateType'
 
-        self.tmpl_args = []
-
-    def add_template_arg(self, ptype):
-        self.tmpl_args.append(ptype)
-
     def __str__(self):
         return '{{{} {}<{}>}}'.format(
             self.type_name,
             self.str_value,
-            ','.join([str(x) for x in self.tmpl_args])
+            ','.join([str(x) for x in self.prm_types])
         )

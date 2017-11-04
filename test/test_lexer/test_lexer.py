@@ -15,8 +15,8 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LNameType('a'), LOperationType('+'), LValueType('5'),
-            LNameType('b'), LOperationType('+'), LValueType('6')
+            LName('a'), LOperation('+'), LConstant('5'),
+            LName('b'), LOperation('+'), LConstant('6')
         ]
 
         lexer = Lexer()
@@ -38,10 +38,10 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LOpenBracketType('('), LCloseBracketType(')'),
-            LOpenBracketType('{'), LCloseBracketType('}'),
-            LOpenBracketType('['), LCloseBracketType(']'),
-            LOperationType('<'), LOperationType('>')
+            LOpenBracket('('), LCloseBracket(')'),
+            LOpenBracket('{'), LCloseBracket('}'),
+            LOpenBracket('['), LCloseBracket(']'),
+            LOperation('<'), LOperation('>')
         ]
 
         lexer = Lexer()
@@ -63,11 +63,11 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LValueType('1'), LValueType('1.'), LValueType('12'),
-            LValueType('1.2'), LValueType('123'), LValueType('12.3'),
-            LValueType('12.34'), LValueType('1_000'),
-            LValueType('1_000.23'), LValueType('1.000_23'),
-            LValueType('1_000.000_23')
+            LConstant('1'), LConstant('1.'), LConstant('12'),
+            LConstant('1.2'), LConstant('123'), LConstant('12.3'),
+            LConstant('12.34'), LConstant('1_000'),
+            LConstant('1_000.23'), LConstant('1.000_23'),
+            LConstant('1_000.000_23')
         ]
 
         lexer = Lexer()
@@ -89,9 +89,9 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LTypeType('A'), LTypeType('Ab'), LTypeType('A1'),
-            LTypeType('Ab1'), LTypeType('T_A'), LTypeType('T_A1'),
-            LTypeType('T_1A'), LTypeType('T_Ab'), LTypeType('T_Ab1')
+            LType('A'), LType('Ab'), LType('A1'),
+            LType('Ab1'), LType('T_A'), LType('T_A1'),
+            LType('T_1A'), LType('T_Ab'), LType('T_Ab1')
         ]
 
         lexer = Lexer()
@@ -113,12 +113,12 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LOperatorType('if'), LOperatorType('elif'), LOperatorType('else'),
-            LOperatorType('while'), LOperatorType('do'), LOperatorType('for'),
-            LOperatorType('with'), LOperatorType('throw'),
-            LOperatorType('try'), LOperatorType('catch'),
-            LOperatorType('finally'), LOperatorType('return'),
-            LOperatorType(','), LOperatorType(';')
+            LOperator('if'), LOperator('elif'), LOperator('else'),
+            LOperator('while'), LOperator('do'), LOperator('for'),
+            LOperator('with'), LOperator('throw'),
+            LOperator('try'), LOperator('catch'),
+            LOperator('finally'), LOperator('return'),
+            LOperator(','), LOperator(';')
         ]
 
         lexer = Lexer()
@@ -140,15 +140,15 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LOperationType('+'), LOperationType('-'), LOperationType('*'),
-            LOperationType('/'), LOperationType('%'),  LOperationType('++'),
-            LOperationType('--'), LOperationType('+='),  LOperationType('-='),
-            LOperationType('*='), LOperationType('/='),  LOperationType('%='),
-            LOperationType('++='), LOperationType('--='),  LOperationType('<'),
-            LOperationType('>'), LOperationType('<='),  LOperationType('>='),
-            LOperationType('=='), LOperationType('!='), LOperationType('!'),
-            LOperationType('.'), LOperationType('->'), LOperationType('in'),
-            LOperationType('is'), LOperationType('=')
+            LOperation('+'), LOperation('-'), LOperation('*'),
+            LOperation('/'), LOperation('%'),  LOperation('++'),
+            LOperation('--'), LOperation('+='),  LOperation('-='),
+            LOperation('*='), LOperation('/='),  LOperation('%='),
+            LOperation('++='), LOperation('--='),  LOperation('<'),
+            LOperation('>'), LOperation('<='),  LOperation('>='),
+            LOperation('=='), LOperation('!='), LOperation('!'),
+            LOperation('.'), LOperation('->'), LOperation('in'),
+            LOperation('is'), LOperation('=')
         ]
 
         lexer = Lexer()
@@ -170,8 +170,8 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LNameType('a'), LNameType('aa'), LNameType('aBcDe'),
-            LNameType('a1'), LNameType('r2d2'), LNameType('r2D2')
+            LName('a'), LName('aa'), LName('aBcDe'),
+            LName('a1'), LName('r2d2'), LName('r2D2')
         ]
 
         lexer = Lexer()
@@ -193,10 +193,10 @@ class TestLexer(TestCase):
         )
 
         actual_data = [
-            LKeywordType('cnst'), LKeywordType('priv'),
-            LKeywordType('prot'), LKeywordType('publ'),
-            LKeywordType('read'), LKeywordType('write'),
-            LKeywordType('clr')
+            LKeyword('cnst'), LKeyword('priv'),
+            LKeyword('prot'), LKeyword('publ'),
+            LKeyword('read'), LKeyword('write'),
+            LKeyword('clr')
         ]
 
         lexer = Lexer()

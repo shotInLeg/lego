@@ -1,7 +1,8 @@
-from legoc.parser.types.pvalue.prvalue import PRValue
+from legoc.parser.types.pvalue.plvalue import PLValue
+from legoc.parser.types.psequence.pparams import PParams
 
 
-class PExpression(PRValue):
+class PExpression(PLValue):
     def __init__(self):
         super(PExpression, self).__init__('')
         self.type_name = 'PExpression'
@@ -9,22 +10,26 @@ class PExpression(PRValue):
 
         self.child = None
 
-    @staticmethod
-    def vov(val1, oper, val2):
-        exp = PExpression()
+    @classmethod
+    def item_operation_item(cls, item1, oper, item2):
+        self = cls()
 
-        if val1.type_name == 'PExpression':
-            oper.left_arg = val1.child
+        if item1.type_name == 'PExpression':
+            oper.left_arg = item1.child
+        elif isinstance(item1, PParams) and len(item1.lst) == 1:
+            oper.left_arg = item1.lst[0]
         else:
-            oper.left_arg = val1
+            oper.left_arg = item1
 
-        if val2.type_name == 'PExpression':
-            oper.right_arg = val2.child
+        if item2.type_name == 'PExpression':
+            oper.right_arg = item2.child
+        elif isinstance(item2, PParams) and len(item2.lst) == 1:
+            oper.right_arg = item2.lst[0]
         else:
-            oper.right_arg = val2
+            oper.right_arg = item2
 
-        exp.child = oper
-        return exp
+        self.child = oper
+        return self
 
     def __str__(self):
         return '{{{} {}}}'.format(self.type_name, self.child)

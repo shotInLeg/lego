@@ -6,30 +6,15 @@ class PFactParams(PParams):
         super(PFactParams, self).__init__()
         self.type_name = 'PFactParams'
 
-    @staticmethod
-    def beb(obr, expr, cbr):
-        vctr = PFactParams()
-        vctr.lst.append(expr.child)
-        return vctr
+    @classmethod
+    def b_item_b(cls, ob, item, cb):
+        self = cls()
 
-    @staticmethod
-    def bvb(obr, val1, cbr):
-        vctr = PFactParams()
-        vctr.lst.append(val1)
+        if item.type_name == 'PExpression':
+            self.lst.append(item.child)
+        elif isinstance(item, PParams) and len(item.lst) == 1:
+            self.lst.append(item.lst[0])
+        else:
+            self.lst.append(item)
 
-        return vctr
-
-    @staticmethod
-    def belb(obr, expr_lst, cbr):
-        vctr = PFactParams()
-
-        for item in expr_lst.lst:
-            vctr.lst.append(item)
-
-        return vctr
-
-    def __str__(self):
-        return '{{{} [{}]}}'.format(
-            self.type_name,
-            ', '.join([str(x) for x in self.lst])
-        )
+        return self

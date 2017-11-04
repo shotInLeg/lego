@@ -6,8 +6,6 @@ class PContext(PSequence):
         super(PContext, self).__init__()
         self.type_name = 'PContext'
 
-        self.lst = []
-
     def __str__(self):
         return '{{CNT {}}}'.format(
             ', '.join(

@@ -16,3 +16,4 @@ from legoc.parser.types.poperation.pmanage_operation import PManageOperation
 from legoc.parser.types.poperation.pmut_manage_operaton import (
     PMutManageOperation
 )
+from legoc.parser.types.poperation.punary_operation import PUnaryOperation

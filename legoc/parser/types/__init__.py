@@ -11,4 +11,4 @@ from legoc.parser.types.psequence import *
 from legoc.parser.types.ptype import *
 from legoc.parser.types.pvalue import *
 from legoc.parser.types.pkeyword import *
-from legoc.parser.types.pdefine import *
+from legoc.parser.types.pinit import *
