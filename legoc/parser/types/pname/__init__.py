@@ -1,1 +1,1 @@
-from legoc.parser.types.pname import *
+from legoc.parser.types.pname.pname import PName

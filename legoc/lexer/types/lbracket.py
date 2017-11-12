@@ -41,3 +41,5 @@ class LBracket(BaseLexerType):
 
         return ''
 
+    def pair(self):
+        return self.get_pair_by_one(self.str_value)

@@ -3,3 +3,4 @@ from legoc.parser.types.pname import *
 from legoc.parser.types.ptype import *
 from legoc.parser.types.pexp import *
 from legoc.parser.types.poperation import *
+from legoc.parser.types.pconstant import *
