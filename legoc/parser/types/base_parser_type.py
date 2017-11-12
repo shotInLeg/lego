@@ -1,23 +1,7 @@
 class BaseParserType(object):
-    def __init__(self, lexem):
-        self.complete = False  # Статус полноценности
-        self.type_name = 'BaseParserType'
-        self.str_value = lexem
+    def __init__(self):
+        self.tstack = [BaseParserType.__name__]
+        self.complete = True
 
-    def __str__(self):
-        if self.complete:
-            view = '{{{} {}}}'.format(
-                self.type_name, self.str_value
-            )
-        else:
-            view = '{{{} {} {}}}'.format(
-                self.type_name, self.str_value,
-                self.complete
-            )
-
-        return view
-
-    def __eq__(self, b):
-        return self.type_name == b.type_name and \
-               self.str_value == b.str_value and \
-               self.complete == self.complete
+    def get(self):
+        raise NotImplementedError('Функцию необходимо переопределить')

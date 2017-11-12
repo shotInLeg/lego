@@ -6,7 +6,7 @@ from legoc.parser.parser import Parser
 from legoc.parser.types import *
 
 
-class TestLexer(TestCase):
+class TestParser(TestCase):
     def test_instructions(self):
         test_data_file = os.path.join(
             os.path.dirname(__file__),
@@ -35,7 +35,7 @@ class TestLexer(TestCase):
         ltokens = lexer.run(test_data_file)
 
         parser = Parser()
-        ptokens = parser.run(ltokens)
+        ptokens = parser.parse_file(ltokens)
 
         for token in ptokens:
             print(token)

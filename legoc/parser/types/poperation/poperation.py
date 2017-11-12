@@ -2,25 +2,27 @@ from legoc.parser.types.base_parser_type import BaseParserType
 
 
 class POperation(BaseParserType):
-    def __init__(self, lexem, priority=0):
-        super(POperation, self).__init__(lexem)
-        self.type_name = 'POperation'
+    un = [
+        '!'
+    ]
 
-        self.priority = priority
-        self.left_arg = None
-        self.right_arg = None
+    bin = [
 
-    def __str__(self):
-        if self.complete:
-            view = '{{{} {} {} {}}}'.format(
-                self.type_name, self.left_arg,
-                self.str_value, self.right_arg
-            )
-        else:
-            view = '{{{} {} {} {} {}}}'.format(
-                self.type_name, self.left_arg,
-                self.str_value, self.right_arg,
-                self.complete
-            )
+    ]
 
-        return view
+    un_and_bin = [
+        '-'
+    ]
+
+    priority = {
+
+    }
+
+    def __init__(self, lexeme):
+        super(POperation, self).__init__()
+        self.tstack.append(POperation.__name__)
+        self.complete = False
+        self.str_value = lexeme
+
+    def get(self):
+        return self

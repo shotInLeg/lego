@@ -2,9 +2,9 @@ from legoc.parser.types.pvalue.pvalue import PValue
 
 
 class PRValue(PValue):
-    def __init__(self, lexem):
-        super(PRValue, self).__init__(lexem)
-        self.type_name = 'PRValue'
-        self.complete = True
+    def __init__(self):
+        super(PRValue, self).__init__()
+        self.tstack.append(PRValue.__name__)
 
-        self.type = None
+    def get(self):
+        return self
