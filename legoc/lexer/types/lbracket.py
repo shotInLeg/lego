@@ -28,16 +28,14 @@ class LBracket(BaseLexerType):
         cls.max_index += 1
         return cls.max_index
 
-    @staticmethod
-    def get_pair_by_one(one):
-        if one == '{' or one == '}':
+    def pair(self):
+        if self.str_value == '{' or self.str_value == '}':
             return '{}'
-        elif one == '(' or one == ')':
+        elif self.str_value == '(' or self.str_value == ')':
             return '()'
-        elif one == '[' or one == ']':
+        elif self.str_value == '[' or self.str_value == ']':
             return '[]'
-        elif one == '<' or one == '>':
+        elif self.str_value == '<' or self.str_value == '>':
             return '<>'
 
         return ''
-

@@ -1,10 +1,10 @@
 from legoc.parser.types.base_parser_type import BaseParserType
 
 
-class POperator(BaseParserType):
+class PValue(BaseParserType):
     def __init__(self, lexeme):
-        super(POperator, self).__init__()
-        self.parents.add(POperator.__name__)
+        super(PValue, self).__init__()
+        self.parents.add(PValue.__name__)
         self.str_value = lexeme
 
     def get(self):

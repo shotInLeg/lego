@@ -7,5 +7,5 @@ class LOpenBracket(LBracket):
         self.type_name = 'LOpenBracket'
 
         self.current_number = self.get_next_index()
-        pair = self.get_pair_by_one(self.str_value)
+        pair = self.pair()
         LOpenBracket.numbers[pair].append(self.current_number)

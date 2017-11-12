@@ -35,7 +35,8 @@ class TestLexer(TestCase):
         ltokens = lexer.run(test_data_file)
 
         parser = Parser()
-        ptokens = parser.run(ltokens)
+        ptokens = parser.parse(ltokens)
+
 
         for token in ptokens:
             print(token)

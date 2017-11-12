@@ -1,101 +1,190 @@
-from legoc.parser.grammar.grammar import grammar
-from legoc.parser.grammar.grammar_rule import GrammarRule
+from legoc.lexer.types import *
+from legoc.parser.types import *
 from legoc.parser.settings import token_mapping
 
 
 class Parser(object):
-    def run(self, lexer_tokens):
-        parser_tokens = [self.get_token(x) for x in lexer_tokens]
+    def parser_cbrackets(self, start, lexer_tokens):
+        brackets, end = self.slice(start, lexer_tokens, lexer_tokens[start])
+        lst = self.split(brackets, LOperator(','))
 
-        rule_num = 0
-        while rule_num < len(grammar):
-            rule, constr = grammar[rule_num]
+        result = []
+        for part in lst:
+            exp = self.parse(part)
+            result.append(exp)
 
-            token_num = 0
-            while token_num < len(parser_tokens):
-                match_len = len(rule)
+        b = PCBrackets()
+        b.child = result[0][0].get() if len(result) == 1 else [x[0].get() for x in result]
 
-                if token_num+match_len-1 < len(parser_tokens):
-                    slice = GrammarRule(
-                        *parser_tokens[token_num:token_num+match_len]
-                    )
+        return b, end
 
-                    if slice == rule:
-                        parser_tokens = self.reorganize(
-                            parser_tokens,
-                            token_num,
-                            token_num+match_len,
-                            slice,
-                            constr
-                        )
+    def parser_sbrackets(self, start, lexer_tokens):
+        brackets, end = self.slice(start, lexer_tokens, lexer_tokens[start])
+        lst = self.split(brackets, LOperator(','))
 
-                        rule_num = -1
-                        break
+        result = []
+        for part in lst:
+            exp = self.parse(part)
+            result.append(exp)
 
-                token_num += 1
-            rule_num += 1
+        b = PList()
+        b.child = [x[0].get() for x in result]
 
-        return parser_tokens
+        return b, end
 
-    def reorganize(self, tokens, si, ei, slice, construct):
-        left_part = []
+    def parser_fbrackets(self, start, lexer_tokens):
+        brackets, end = self.slice(start, lexer_tokens, lexer_tokens[start])
+        lst = self.split(brackets, LOperator(';'))
+
+        result = []
+        for part in lst:
+            exp = self.parse(part)
+            result.append(exp)
+
+        b = PFBrackets()
+        b.child = [x[0].get() for x in result]
+
+        return b, end
+
+    def parser_brackets(self, start, lexer_tokens):
+        obracket = lexer_tokens[start]
+        if obracket.str_value == '(':
+            return self.parser_cbrackets(start, lexer_tokens)
+        elif obracket.str_value == '[':
+            return self.parser_sbrackets(start, lexer_tokens)
+        elif obracket.str_value == '{':
+            return self.parser_fbrackets(start, lexer_tokens)
+        return None
+
+    def parse(self, lexer_tokens):
 
         i = 0
-        while i < len(tokens) and i != si:
-            left_part.append(tokens[i])
+        stack = []
+        while i < len(lexer_tokens):
+            tkn = lexer_tokens[i]
+
+            if isinstance(tkn, LOpenBracket):
+                tkn, end = self.parser_brackets(i, lexer_tokens)
+                i = end
+            else:
+                tkn = self.get_token(tkn)
+
+            stack = self.reduce(stack, tkn)
+
             i += 1
 
-        right_part = []
+        stack = self.full_reduce(stack)
+        '''
+        while len(stack) > 1:
+            tkn = stack.pop()
+            print('stack: {}'.format([str(x) for x in stack]))
+            print('tkn: {}'.format(tkn))
+            stack = self.reduce(stack, tkn)
+        '''
 
-        i = ei
-        while i < len(tokens):
-            right_part.append(tokens[i])
-            i += 1
-
-        new_token = construct(*slice)
-        new_tokens = []
-        new_tokens.extend(left_part)
-        new_tokens.append(new_token)
-        new_tokens.extend(right_part)
-
-        return new_tokens
+        return stack
 
     def get_token(self, ltoken):
         for token_type, constr in token_mapping.items():
+            if isinstance(ltoken, LOperation):
+                if ltoken.str_value == '=':
+                    return PInit(ltoken.str_value)
+                elif ltoken.str_value in ['!', '~']:
+                    return PUOperation(ltoken.str_value)
+
+            if isinstance(ltoken, LOperator):
+                if ltoken.str_value == 'if':
+                    return PIf(ltoken.str_value)
+                else:
+                    return POperator(ltoken.str_value)
+
             if isinstance(ltoken, token_type):
-                return constr(ltoken)
+                return constr(ltoken.str_value)
         return None
 
+    def full_reduce(self, stack):
+        new_stack = stack[:]
+
+        second = []
+        while len(new_stack) > 1:
+            size = len(new_stack)
+            tkn = new_stack.pop()
+            new_stack = self.reduce(new_stack, tkn)
+
+            if len(new_stack) == size:
+                second.append(tkn)
+                new_stack.pop()
+            elif second:
+                new_stack.append(second.pop())
+        return new_stack
+
+    def reduce(self, stack, tkn):
+        new_stack = stack[:]
+        if not new_stack:
+            new_stack.append(tkn)
+            return new_stack
+
+        prev = new_stack.pop()
+
+        # print('{}.right_reduce({})'.format(prev, tkn))
+        right = prev.right_reduce(tkn)
+        if right is not None:
+            new_stack.append(right)
+            return new_stack
+
+        # print('{}.left_reduce({})'.format(tkn, prev))
+        left = tkn.left_reduce(prev)
+        if left is not None:
+            new_stack.append(left)
+            return new_stack
+
+        new_stack.extend([prev, tkn])
+        return new_stack
+
     @staticmethod
-    def aplicate(stack, token):
-        current_stack_state = stack[::]
-        work_stack = stack[::]
-        work_stack.append(token)
+    def slice(start, lexer_tokens, obracket):
+        brackets = []
+        i = start + 1
+        while i < len(lexer_tokens):
+            tkn = lexer_tokens[i]
+            if isinstance(tkn, LCloseBracket) and \
+                            tkn.current_number == obracket.current_number:
+                break
+            brackets.append(tkn)
 
-        while current_stack_state != work_stack and len(work_stack) > 1:
-            current_stack_state = work_stack[::]
+            i += 1
 
-            item_l = work_stack.pop(-1)
-            item_pl = work_stack.pop(-1)
-            item_new = Parser.reduce2(item_pl, item_l)
-
-            if item_new is None:
-                work_stack.append(item_pl)
-                work_stack.append(item_l)
-
-            else:
-                work_stack.append(item_new)
-
-        return work_stack
+        return brackets, i
 
     @staticmethod
-    def reduce2(item_pl, item_l):
-        item_new = None
+    def split(lexer_tokens, token):
+        part = []
+        result = []
+        for tkn in lexer_tokens:
+            if tkn == token and Parser.is_balanced(part):
+                result.append(part)
+                part = []
+                continue
 
-        if item_pl.ra:
-            item_new = item_pl.right_reduce(item_l)
+            part.append(tkn)
 
-        if item_l.la and item_new is None and item_pl.complete:
-            item_new = item_l.left_reduce(item_pl)
+        if part:
+            result.append(part)
 
-        return item_new
+        return result
+
+    @staticmethod
+    def is_balanced(lexer_tokens):
+        brackets = {'()': 0, '[]': 0, '{}': 0}
+
+        for tkn in lexer_tokens:
+            if isinstance(tkn, LBracket) and tkn.pair() in brackets:
+                if isinstance(tkn, LOpenBracket):
+                    brackets[tkn.pair()] += 1
+                else:
+                    brackets[tkn.pair()] -= 1
+
+        for count in brackets.values():
+            if count != 0:
+                return False
+        return True
