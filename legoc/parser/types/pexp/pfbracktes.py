@@ -8,4 +8,9 @@ class PFBrackets(BaseParserType):
         self.child = child
 
     def get(self):
-        return self.child
+        return self
+
+    def __str__(self):
+        return '{{[{}]}}'.format(
+            [str(x) for x in self.child]
+        )

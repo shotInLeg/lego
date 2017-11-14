@@ -9,3 +9,8 @@ class PConstant(PRValue):
 
     def get(self):
         return self
+
+    def __str__(self):
+        return '{{{}}}'.format(
+            self.str_value
+        )

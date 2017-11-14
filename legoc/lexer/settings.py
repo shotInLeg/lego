@@ -3,7 +3,8 @@ import re
 from legoc.lexer.types import *
 
 
-lkeyword_priority = 7
+lkeyword_priority = 8
+lmodifier_priority = 7
 loperator_priority = 6
 loperation_priority = 5
 ltype_priority = 4
@@ -13,13 +14,17 @@ lname_priority = 1
 
 
 regexp = {
-    re.compile(r'^cnst$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^priv$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^prot$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^publ$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^read$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^write$'): ('lkeyword', lkeyword_priority),
-    re.compile(r'^clr'): ('lkeyword', lkeyword_priority),
+    re.compile(r'^package$'): ('lkeyword', lkeyword_priority),
+    re.compile(r'^using'): ('lkeyword', lkeyword_priority),
+    re.compile(r'^import'): ('lkeyword', lkeyword_priority),
+
+    re.compile(r'^cnst$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^priv$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^prot$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^publ$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^read$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^write$'): ('lmodifier', lmodifier_priority),
+    re.compile(r'^clr'): ('lmodifier', lmodifier_priority),
 
     re.compile(r'^[a-z]$'): ('lname', lname_priority),
     re.compile(r'^[a-z][A-Za-z0-9]+$'): ('lname', lname_priority),
@@ -49,6 +54,7 @@ regexp = {
     re.compile(r'^[-][>]$'): ('loperation', loperation_priority),
     re.compile(r'^[.]$'): ('loperation', loperation_priority),
     re.compile(r'^[:]$'): ('loperation', loperation_priority),
+    re.compile(r'^[|]$'): ('loperation', loperation_priority),
     re.compile(r'^in$'): ('loperation', loperation_priority),
     re.compile(r'^is$'): ('loperation', loperation_priority),
 
@@ -98,6 +104,7 @@ regexp = {
 
 ltypes = {
     'lkeyword': LKeyword,
+    'lmodifier': LModifier,
     'lname': LName,
     'loperation': LOperation,
     'loperator': LOperator,

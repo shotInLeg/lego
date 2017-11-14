@@ -1,2 +1,4 @@
-a = 5,
-b = [5 + 6, 8 + 6]
+sum(a, b) =Int(Int,Int) {
+    a + b;
+    b + a;
+}

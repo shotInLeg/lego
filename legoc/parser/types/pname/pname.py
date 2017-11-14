@@ -6,3 +6,8 @@ class PName(PLValue):
         super(PName, self).__init__()
         self.tstack.append(PName.__name__)
         self.str_value = lexeme
+
+    def __str__(self):
+        return '{{{}}}'.format(
+            self.str_value
+        )

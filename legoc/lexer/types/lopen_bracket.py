@@ -6,6 +6,6 @@ class LOpenBracket(LBracket):
         super(LOpenBracket, self).__init__(lexem)
         self.type_name = 'LOpenBracket'
 
-        self.current_number = self.get_next_index()
-        pair = self.get_pair_by_one(self.str_value)
-        LOpenBracket.numbers[pair].append(self.current_number)
+        # self.current_number = self.get_next_index()
+        # pair = self.get_pair_by_one(self.str_value)
+        # LOpenBracket.numbers[pair].append(self.current_number)

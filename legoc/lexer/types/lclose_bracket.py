@@ -6,5 +6,5 @@ class LCloseBracket(LBracket):
         super(LCloseBracket, self).__init__(lexem)
         self.type_name = 'LCloseBracket'
 
-        pair = self.get_pair_by_one(self.str_value)
-        self.current_number = LBracket.numbers[pair].pop()
+        # pair = self.get_pair_by_one(self.str_value)
+        # self.current_number = LBracket.numbers[pair].pop()
