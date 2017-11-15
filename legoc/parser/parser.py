@@ -15,7 +15,8 @@ class Parser(object):
 
             # Выражения инициализации
             elif isinstance(instr[0], LModifier) or \
-                    isinstance(instr[0], LName):
+                    isinstance(instr[0], LName) or \
+                    isinstance(instr[0], LType):
                 reduced = self.parse_init(instr)
 
             else:
@@ -54,9 +55,14 @@ class Parser(object):
         i = 0
         while isinstance(ltokens[i], LModifier):
             modifier_list.append(self._get_ptoken(ltokens[i]))
-            i += 0
+            i += 1
 
         lvalue_tokens, other = self._split(ltokens[i::], LOperation('='))
+
+        if lvalue_tokens and isinstance(lvalue_tokens[0], LType):
+            lvalue = self.parse_type(lvalue_tokens)
+        else:
+            lvalue = self.parse_exp(lvalue_tokens)
 
         itype = None
         if isinstance(other[0], LType):
@@ -66,11 +72,12 @@ class Parser(object):
             self._print_ltokens(other)
             itype = self.parse_type(type_tokens)
 
-        lvalue = self.parse_exp(lvalue_tokens)
         value = self.parse_exp(other)
 
         if isinstance(value, PFBrackets):
             init = PInitFunc(modifier_list, lvalue, itype, value)
+        elif isinstance(lvalue, PType):
+            init = PInitType(modifier_list, lvalue, itype, value)
         else:
             init = PInitValue(modifier_list, lvalue, itype, value)
 
@@ -138,17 +145,31 @@ class Parser(object):
 
     def parser_sbrackets(self, start, lexer_tokens):
         brackets, end = self._slice(start, lexer_tokens, LCloseBracket(']'))
+
+        if len(brackets) == 1 and brackets[0] == LOperation('='):
+            return PStruct([]), end
+        elif len(brackets) == 1 and brackets[0] == LOperation(':'):
+            return PDict([]), end
+
         lst = self._split(brackets, LOperator(','))
 
         result = []
         for part in lst:
-            exp = self.parse_exp(part)
+            try:
+                exp = self.parse_init(part)
+            except:
+                exp = self.parse_exp(part)
             result.append(exp)
 
         child = [x.get() for x in result]
-        b = PSBrackets(child)
+        if child and isinstance(child[0], PInit):
+            res = PStruct(child)
+        elif child and child[0] == LOperation(':'):
+            res = PDict(child)
+        else:
+            res = PSBrackets(child)
 
-        return b, end
+        return res, end
 
     def parser_fbrackets(self, start, lexer_tokens):
         brackets, end = self._slice(start, lexer_tokens, LCloseBracket('}'))

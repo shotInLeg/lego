@@ -14,7 +14,7 @@ class POperation(BaseParserType):
     brac = ['()', '[]']
 
     priority = {
-        '.': 22, '()': 22,
+        '.': 22, '()': 22, '[]': 22,
 
         '!': 21,
 

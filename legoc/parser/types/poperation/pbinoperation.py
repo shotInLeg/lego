@@ -72,6 +72,9 @@ class PBinOperation(POperation):
         if 'PCBrackets' in tkn.tstack:
             self.right = tkn.get_list()
             self.complete = True
+        elif 'PSBrackets' in tkn.tstack:
+            self.right = tkn.get_list()
+            self.complete = True
         else:
             raise ValueError('Ожидался список параметров')
 
