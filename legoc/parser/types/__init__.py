@@ -6,3 +6,4 @@ from legoc.parser.types.poperation import *
 from legoc.parser.types.pconstant import *
 from legoc.parser.types.pspecial import *
 from legoc.parser.types.pinit import *
+from legoc.parser.types.poperator import *

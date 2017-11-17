@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba7b8189-8f79-4fbe-8c79-847ffdbcc3c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/pstruct.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/base_parser.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/pexp/ptbrackets.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelif.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelse.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pexit/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pexit/preturn.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelif.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelifelse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelse.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/legoc/parser/types/ptype/pfunctype.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/lexer/settings.py" afterPath="$PROJECT_DIR$/legoc/lexer/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/parser.py" afterPath="$PROJECT_DIR$/legoc/parser/parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pinit/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pinit/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pspecial/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pspecial/pmodifier.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/pmodifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pwhile.py" afterPath="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pwhile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py" afterPath="$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/ptype/__init__.py" afterPath="$PROJECT_DIR$/legoc/parser/types/ptype/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py" afterPath="$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py" afterPath="$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt" afterPath="$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,58 +48,38 @@
     <SUITE FILE_PATH="coverage/lego$Unittests_for_test_lexer_TestLexer_test_regexp.coverage" NAME="Unittests for test_lexer.TestLexer.test_regexp Coverage Results" MODIFIED="1508089455521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_lexer" />
     <SUITE FILE_PATH="coverage/lego$Unittests_for_test_parser_TestLexer_test_vector.coverage" NAME="Unittests for test_parser.TestLexer.test_vector Coverage Results" MODIFIED="1509581876778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_parser" />
     <SUITE FILE_PATH="coverage/lego$Unittests_in_test_parser_py.coverage" NAME="Unittests in test_parser.py Coverage Results" MODIFIED="1508709239657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_parser" />
-    <SUITE FILE_PATH="coverage/lego$Unittests_for_test_parser_TestParser_test_expressions.coverage" NAME="Unittests for test_parser.TestParser.test_expressions Coverage Results" MODIFIED="1510786647149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_parser" />
+    <SUITE FILE_PATH="coverage/lego$Unittests_for_test_parser_TestParser_test_expressions.coverage" NAME="Unittests for test_parser.TestParser.test_expressions Coverage Results" MODIFIED="1510935371295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_parser" />
     <SUITE FILE_PATH="coverage/lego$Unittests_in_test_lexer_py.coverage" NAME="Unittests in test_lexer.py Coverage Results" MODIFIED="1508443849671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test/test_lexer" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/parser/parser.py">
+      <file leaf-file-name="test_expressions.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+            <state relative-caret-position="60">
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pbinoperation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pmodifier.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pmodifier.py">
+      <file leaf-file-name="psbrackets.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_parser/test_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -89,42 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_expressions.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="plist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pstruct.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pstruct.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="192">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,9 +102,65 @@
       <file leaf-file-name="pdict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="402">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ptempltype.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_lexer_type.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/base_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poperation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/legoc/parser/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="195" column="32" lean-forward="false" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,57 +196,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/poperator.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelif.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelifelse.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelse.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pwhile.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pfor.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pdowhile.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcontextual/pwith.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcontextual/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pexp/pexpression.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pname/__init__.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pconstant/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lmodifier.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/ptype/psimpletype.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/ptype/pfunctype.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit.py" />
-        <option value="$PROJECT_DIR$/legoc/lexer/settings.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/pkeyword.py" />
         <option value="$PROJECT_DIR$/legoc/parser/settings.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/poperation/punoperation.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/base_parser_type.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pname/pname.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pconstant/pconstant.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lopen_bracket.py" />
         <option value="$PROJECT_DIR$/legoc/lexer/types/lclose_bracket.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pexp/pfbracktes.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/pcbrackets.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/pstruct.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pinit/__init__.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/__init__.py" />
-        <option value="$PROJECT_DIR$/legoc/parser/parser.py" />
         <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/pmodifier.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pexit/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelif.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelif.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelse.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pexit/preturn.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pwhile.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py" />
+        <option value="$PROJECT_DIR$/legoc/lexer/types/lbracket.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py" />
+        <option value="$PROJECT_DIR$/legoc/lexer/settings.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/ptype/__init__.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/ptbrackets.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/pcbrackets.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py" />
+        <option value="$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py" />
         <option value="$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt" />
+        <option value="$PROJECT_DIR$/legoc/parser/base_parser.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/parser.py" />
+        <option value="$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py" />
       </list>
     </option>
   </component>
@@ -328,6 +354,41 @@
               <item name="parser" type="462c0819:PsiDirectoryNode" />
               <item name="types" type="462c0819:PsiDirectoryNode" />
               <item name="poperation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
+              <item name="legoc" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="poperator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
+              <item name="legoc" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="poperator" type="462c0819:PsiDirectoryNode" />
+              <item name="pconditional" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
+              <item name="legoc" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="poperator" type="462c0819:PsiDirectoryNode" />
+              <item name="pcyclic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lego" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lego" type="462c0819:PsiDirectoryNode" />
+              <item name="legoc" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
+              <item name="poperator" type="462c0819:PsiDirectoryNode" />
+              <item name="pexit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lego" type="b2602c69:ProjectViewProjectNode" />
@@ -513,34 +574,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 48m 48s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 07m 35s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 51m 28s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 07m 37s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 52m 51s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 07m 46s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 55m 08s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 10m 14s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 55m 14s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 12m 50s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 55m 41s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 13m 03s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 56m 38s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 14m 15s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 56m 44s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 15m 24s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 56m 49s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 15m 37s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.16 at 01h 57m 27s.xml">
+    <history-entry file="Unittests_for_test_parser_TestParser_test_expressions - 2017.11.17 at 19h 16m 11s.xml">
       <configuration name="Unittests for test_parser.TestParser.test_expressions" configurationId="tests" />
     </history-entry>
   </component>
@@ -552,7 +613,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38618347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38618347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27106228" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -581,8 +642,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/legoc/parser/parser.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="19" />
+          <line>143</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/legoc/parser/parser.py</url>
+          <line>193</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/legoc/parser/parser.py</url>
+          <line>194</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/legoc/parser/parser.py</url>
+          <line>195</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/legoc/parser/parser.py</url>
+          <line>196</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -592,144 +673,16 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/pexpression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/legoc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pconstant/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pname/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lkeyword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lmodifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="49" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit.py" />
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/psimpletype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legoc/lexer/types/loperator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,7 +707,7 @@
         <state relative-caret-position="150">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -769,60 +722,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/base_parser_type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/pfunctype.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lbracket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/lexer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -851,68 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/pcbrackets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="69" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legoc/parser/types/pname/pname.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -925,22 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="51" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -966,7 +791,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -979,24 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/legoc/parser/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pmodifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1005,10 +812,310 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt">
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pexit/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#55#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pifelif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pelse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pexit/preturn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/pwhile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pconditional/pif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperator/pcyclic/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#62#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/lexer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/lbracket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_type.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_value.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pinit/pinit_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="59" column="60" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="60" lean-forward="false" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/base_parser_type.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/ptbrackets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/pcbrackets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/psimpletype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/ptype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/lexer/types/base_lexer_type.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/ptype/ptempltype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/pdict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pspecial/plist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/pbinoperation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/pexp/psbrackets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_parser/parser_run_test_files/test_expressions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="195" column="32" lean-forward="false" selection-start-line="195" selection-start-column="23" selection-end-line="195" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/base_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/legoc/parser/types/poperation/poperation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>

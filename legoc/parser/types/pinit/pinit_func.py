@@ -8,7 +8,7 @@ class PInitFunc(PInit):
 
         self.modifiers = modif
         self.lvalue = lvalue
-        self.type = type
+        self.return_type = type
         self.value = value
 
     def get(self):
@@ -18,6 +18,6 @@ class PInitFunc(PInit):
         return '{{func\n    [{}]\n    {}\n    {}\n    {}}}'.format(
             ' '.join([str(x) for x in self.modifiers]),
             self.lvalue,
-            self.type,
+            self.return_type,
             self.value
         )

@@ -1,7 +1,7 @@
-from legoc.parser.types.base_parser_type import BaseParserType
+from legoc.parser.types.pvalue.plvalue import PLValue
 
 
-class PType(BaseParserType):
+class PType(PLValue):
     def __init__(self):
         super(PType, self).__init__()
         self.tstack.append(PType.__name__)

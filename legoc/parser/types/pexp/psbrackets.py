@@ -15,12 +15,3 @@ class PSBrackets(PExpression):
             return self.child
         else:
             return [self.child]
-
-    def left_reduce(self, tkn):
-        if 'PValue' in tkn.tstack:
-            oper = PBinOperation('[]')
-            oper = oper.left_reduce(tkn)
-            exp = oper.right_reduce(self)
-            return exp
-
-        return None

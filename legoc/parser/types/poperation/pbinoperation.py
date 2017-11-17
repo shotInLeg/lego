@@ -47,7 +47,7 @@ class PBinOperation(POperation):
             exp.child = res
             return exp
 
-        # Обработка операций-скобок (), []
+        # Обработка операций-скобок (), [], <>
         if self.str_value in self.brac:
             res = self.update_brackets(tkn)
 
@@ -72,7 +72,10 @@ class PBinOperation(POperation):
         if 'PCBrackets' in tkn.tstack:
             self.right = tkn.get_list()
             self.complete = True
-        elif 'PSBrackets' in tkn.tstack:
+        elif 'PList' in tkn.tstack:
+            self.right = tkn.get_list()
+            self.complete = True
+        elif 'PTBrackets' in tkn.tstack:
             self.right = tkn.get_list()
             self.complete = True
         else:

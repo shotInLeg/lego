@@ -1,11 +1,6 @@
-Point =Type(Scalar) [
-    x = 0.0,
-    y = 0.0,
-    z = 0.0,
-
-    new(x, y, z) =Point(Dbl, Dbl, Dbl) {
-        obj.x = x;
-        obj.y = y;
-        obj.z = z;
-    }
-]
+cnst fib(n|Int) => Int {
+    while n << 10 {
+        writeln(n);
+        n += 1;
+    };
+}
