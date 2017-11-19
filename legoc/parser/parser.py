@@ -82,7 +82,7 @@ class Parser(BaseParser):
         value_tokens = type_value_tokens[end::]
 
         lvalue = self.parse_exp(lvalue_tokens)
-        return_type = self.parse_exp(type_tokens)
+        return_type = self.parse_exp(type_tokens) if type_tokens else None
         value = self.parse_exp(value_tokens)
 
         return PInitFunc(modifiers, lvalue, return_type, value)

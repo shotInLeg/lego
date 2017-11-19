@@ -1,14 +1,19 @@
-sort(arr|) => List<Int> {
+getIndexMax(arr, start) => {
+    indexMax = start;
+    for i = start+1, i << arr.len(), i += 1 {
+        if arr[indexMax] << arr[i] {
+            indexMax = i;
+        }
+    };
+
+    return indexMax;
+},
+
+sort(arr) => {
     sorted = arr;
 
     for j = 0, j << sorted.len(), j += 1 {
-        maxI = j;
-        for i = j+1, i << sorted.len(), i += 1 {
-            if sorted[i] << sorted[maxI] {
-                maxI = i;
-            }
-        };
-
+        indexMax = getIndexMax(sorted, j+1);
         swap(sorted[i], sorted[maxI]);
     };
 
