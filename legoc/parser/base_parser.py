@@ -1,3 +1,5 @@
+from copy import copy
+
 from legoc.lexer.types import *
 from legoc.parser.types import *
 from .settings import classes_mapping
@@ -86,6 +88,17 @@ class BaseParser(object):
 
         if part:
             result.append(part)
+
+        return result
+
+    def replace(self, tokens, token, new_token):
+        result = []
+
+        for tkn in tokens:
+            if tkn == token and self.is_balanced(result):
+                result.append(new_token)
+            else:
+                result.append(tkn)
 
         return result
 

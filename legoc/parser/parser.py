@@ -60,8 +60,9 @@ class Parser(BaseParser):
         lvalue = self.parse_exp(lvalue_tokens)
         value = self.parse_exp(value_tokens)
 
-        # MyList<T_1>(List) = [ ... ]
-        if isinstance(lvalue, PType):
+        # MyList<T_1>(Parent) = [ ... ]
+        if isinstance(lvalue, PType) or \
+                (isinstance(lvalue, POperation) and isinstance(lvalue.left, PType)):
             init = PInitType(modifiers, lvalue, value)
 
         # a = 5, list.get(x) = 8
@@ -138,10 +139,7 @@ class Parser(BaseParser):
 
         # max(a, b) + 7
         else:
-            try:
-                res = self.parse_exp(tokens)
-            except:
-                pass
+            res = self.parse_exp(tokens)
 
         return res.get()
 
@@ -156,12 +154,15 @@ class Parser(BaseParser):
             return PReturn(exp)
 
         elif ltoken[0].str_value == 'if':
-            return self.parser_if(ltoken)
+            return self.parse_if(ltoken)
 
         elif ltoken[0].str_value == 'while':
-            return self.parser_while(ltoken)
+            return self.parse_while(ltoken)
 
-    def parser_if(self, tokens):
+        elif ltoken[0].str_value == 'for':
+            return self.parse_for(ltoken)
+
+    def parse_if(self, tokens):
         cond_cntxts = self.split(tokens[1::], LOperator('elif'))
 
         pif = None
@@ -189,12 +190,36 @@ class Parser(BaseParser):
 
         return pif.get()
 
-    def parser_while(self, tokens):
+    def parse_while(self, tokens):
         cond_tokens, end = self.cut_on_token(tokens, LOpenBracket('{'), 1)
         cntx_tokens = tokens[end::]
         cond = self.parse_exp(cond_tokens)
         context = self.parse_exp(cntx_tokens)
         return PWhile(cond, context)
+
+    def parse_for(self, tokens):
+        cond_tokens, end = self.cut_on_token(tokens, LOpenBracket('{'), 1)
+        cntx_tokens = tokens[end::]
+
+        cond_tokens = self.replace(cond_tokens, LOperator(','), LOperator(';'))
+        cond_tokens.insert(0, LOpenBracket('{'))
+        cond_tokens.append(LCloseBracket('}'))
+
+        cond = self.parse_exp(cond_tokens)
+        context = self.parse_exp(cntx_tokens)
+
+        # for x in arr { ... }
+        if len(cond.child) == 1:
+            return PForEach(cond.child[0], context)
+
+        # for i = 0; i < N; i += 1 { ... }
+        elif len(cond.child) == 3:
+            return PFor(cond.child[0], cond.child[1], cond.child[2], context)
+
+        else:
+            raise ValueError('Неизветный список параметров цикла for `{}`'.format(
+                [str(x) for x in cond.child]
+            ))
 
     def parser_cbrackets(self, start, tokens):
         from_brackets, end = self.from_brackets(
@@ -246,10 +271,10 @@ class Parser(BaseParser):
         elif not from_brackets:
             return PList([]), end
 
-
         result = []
         for part in from_brackets:
-            if self.is_in(part, LOperation('=')):
+            if self.is_in(part, LOperation('=')) or \
+                    self.is_in(part, LOperation('=>')):
                 exp = self.parse_init(part)
             else:
                 exp = self.parse_exp(part)

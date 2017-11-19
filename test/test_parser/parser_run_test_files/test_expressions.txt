@@ -1,6 +1,5 @@
-cnst fib(n|Int) => Int {
-    while n << 10 {
-        writeln(n);
-        n += 1;
+foo(arr, n) => Void {
+    for x in arr {
+        writeln(x);
     };
 }
