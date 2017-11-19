@@ -115,7 +115,13 @@ class Parser(BaseParser):
                 except:
                     pass
 
-            stack = self.reduce(stack, tkn)
+            try:
+                stack = self.reduce(stack, tkn)
+
+            except Exception as ex:
+                raise ValueError('{}: reduce(stack={}, tkn={})'.format(
+                    ex, [str(x) for x in stack], tkn
+                ))
             i += 1
 
         if len(stack) != 1:
@@ -128,23 +134,18 @@ class Parser(BaseParser):
         if not tokens:
             raise ValueError('Ожидалось выражение или оператор')
 
-        try:
-            # if a > b { ... }
-            if isinstance(tokens[0], LOperator):
-                res = self.parse_oper(tokens)
+        # if a > b { ... }
+        if isinstance(tokens[0], LOperator):
+            res = self.parse_oper(tokens)
 
-            # a = 5, fib(n|Int) => Int { ... }
-            elif self.is_in(tokens, LOperation('=')) or \
-                    self.is_in(tokens, LOperation('=>')):
-                res = self.parse_init(tokens)
+        # a = 5, fib(n|Int) => Int { ... }
+        elif self.is_in(tokens, LOperation('=')) or \
+                self.is_in(tokens, LOperation('=>')):
+            res = self.parse_init(tokens)
 
-            # max(a, b) + 7
-            else:
-                res = self.parse_exp(tokens)
-
-            temp = res.get()
-        except Exception as ex:
-            pass
+        # max(a, b) + 7
+        else:
+            res = self.parse_exp(tokens)
 
         return res.get()
 

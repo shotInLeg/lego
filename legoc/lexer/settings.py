@@ -102,6 +102,9 @@ regexp = {
         ('lconstant', lconstant_priority),  # number (1_000.)
 
     re.compile(r'^\".*\"$'): ('lconstant', lconstant_priority),  # string
+
+    re.compile(r'^true$'): ('lconstant', lconstant_priority),  # bool
+    re.compile(r'^false$'): ('lconstant', lconstant_priority),  # bool
 }
 
 

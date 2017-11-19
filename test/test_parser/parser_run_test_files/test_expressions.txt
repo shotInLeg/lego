@@ -1,5 +1,16 @@
-foo(arr, n) => Void {
-    do {
-        writeln(arr[n]);
-    } while n << 10;
+sort(arr|) => List<Int> {
+    sorted = arr;
+
+    for j = 0, j << sorted.len(), j += 1 {
+        maxI = j;
+        for i = j+1, i << sorted.len(), i += 1 {
+            if sorted[i] << sorted[maxI] {
+                maxI = i;
+            }
+        };
+
+        swap(sorted[i], sorted[maxI]);
+    };
+
+    return sorted;
 }
