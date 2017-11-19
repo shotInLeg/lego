@@ -11,3 +11,8 @@ class PDoWhile(POperator):
 
     def get(self):
         return self
+
+    def __str__(self):
+        return '{{do [{}] while ({})}}'.format(
+            self.context, self.cond
+        )

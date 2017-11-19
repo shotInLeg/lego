@@ -1,5 +1,5 @@
 foo(arr, n) => Void {
-    for x in arr {
-        writeln(x);
-    };
+    do {
+        writeln(arr[n]);
+    } while n << 10;
 }

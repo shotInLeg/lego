@@ -128,18 +128,23 @@ class Parser(BaseParser):
         if not tokens:
             raise ValueError('Ожидалось выражение или оператор')
 
-        # if a > b { ... }
-        if isinstance(tokens[0], LOperator):
-            res = self.parse_oper(tokens)
+        try:
+            # if a > b { ... }
+            if isinstance(tokens[0], LOperator):
+                res = self.parse_oper(tokens)
 
-        # a = 5, fib(n|Int) => Int { ... }
-        elif self.is_in(tokens, LOperation('=')) or \
-                self.is_in(tokens, LOperation('=>')):
-            res = self.parse_init(tokens)
+            # a = 5, fib(n|Int) => Int { ... }
+            elif self.is_in(tokens, LOperation('=')) or \
+                    self.is_in(tokens, LOperation('=>')):
+                res = self.parse_init(tokens)
 
-        # max(a, b) + 7
-        else:
-            res = self.parse_exp(tokens)
+            # max(a, b) + 7
+            else:
+                res = self.parse_exp(tokens)
+
+            temp = res.get()
+        except Exception as ex:
+            pass
 
         return res.get()
 
@@ -161,6 +166,9 @@ class Parser(BaseParser):
 
         elif ltoken[0].str_value == 'for':
             return self.parse_for(ltoken)
+
+        elif ltoken[0].str_value == 'do':
+            return self.parse_dowhile(ltoken)
 
     def parse_if(self, tokens):
         cond_cntxts = self.split(tokens[1::], LOperator('elif'))
@@ -220,6 +228,13 @@ class Parser(BaseParser):
             raise ValueError('Неизветный список параметров цикла for `{}`'.format(
                 [str(x) for x in cond.child]
             ))
+
+    def parse_dowhile(self, tokens):
+        context_tokens, cond_tokens = self.split(tokens[1::], LOperator('while'))
+        context = self.parse_exp(context_tokens)
+        cond = self.parse_exp(cond_tokens)
+
+        return PDoWhile(cond, context)
 
     def parser_cbrackets(self, start, tokens):
         from_brackets, end = self.from_brackets(
