@@ -128,6 +128,11 @@ class Parser(BaseParser):
             raise ValueError('Неизвестная последовательность {}'.format(
                 ' '.join([str(x.get()) for x in stack])
             ))
+
+        try:
+            temp = stack[0].get()
+        except Exception as ex:
+            pass
         return stack[0].get()
 
     def parse_instr(self, tokens):
@@ -140,7 +145,7 @@ class Parser(BaseParser):
 
         # a = 5, fib(n|Int) => Int { ... }
         elif self.is_in(tokens, LOperation('=')) or \
-                self.is_in(tokens, LOperation('=>')):
+                    self.is_in(tokens, LOperation('=>')):
             res = self.parse_init(tokens)
 
         # max(a, b) + 7
@@ -170,6 +175,9 @@ class Parser(BaseParser):
 
         elif ltoken[0].str_value == 'do':
             return self.parse_dowhile(ltoken)
+
+        elif ltoken[0].str_value == 'with':
+            return self.parse_with(ltoken)
 
     def parse_if(self, tokens):
         cond_cntxts = self.split(tokens[1::], LOperator('elif'))
@@ -223,7 +231,9 @@ class Parser(BaseParser):
 
         # for i = 0; i < N; i += 1 { ... }
         elif len(cond.child) == 3:
-            return PFor(cond.child[0], cond.child[1], cond.child[2], context)
+            start = cond.child[0].get_list() if isinstance(cond.child[0], PCBrackets) else [cond.child[0]]
+            step = cond.child[2].get_list() if isinstance(cond.child[2], PCBrackets) else [cond.child[2]]
+            return PFor(start, cond.child[1], step, context)
 
         else:
             raise ValueError('Неизветный список параметров цикла for `{}`'.format(
@@ -236,6 +246,17 @@ class Parser(BaseParser):
         cond = self.parse_exp(cond_tokens)
 
         return PDoWhile(cond, context)
+
+    def parse_with(self, tokens):
+        exp_tokens, end = self.cut_on_token(tokens, LOpenBracket('{'), 1)
+        cntx_tokens = tokens[end::]
+        exp = self.parse_exp(exp_tokens)
+        context = self.parse_exp(cntx_tokens)
+
+        if isinstance(exp, PCBrackets):
+            return PWith(exp.get_list(), context)
+        else:
+            return PWith([exp.get()], context)
 
     def parser_cbrackets(self, start, tokens):
         from_brackets, end = self.from_brackets(

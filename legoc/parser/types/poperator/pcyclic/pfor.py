@@ -16,6 +16,8 @@ class PFor(POperator):
 
     def __str__(self):
         return '{{for ({}; {}; {}) [{}]}}'.format(
-            self.start, self.cond, self.step,
+            ','.join([str(x) for x in self.start]),
+            self.cond,
+            ','.join([str(x) for x in self.step]),
             self.context
         )

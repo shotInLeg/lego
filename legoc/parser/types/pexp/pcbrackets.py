@@ -10,8 +10,7 @@ class PCBrackets(PExpression):
     def get(self):
         if not isinstance(self.child, list):
             return self.child
-        raise ValueError('Множественный дочерний элеемент\n'
-                         'Возможно нужен get_list')
+        return self
 
     def get_list(self):
         if isinstance(self.child, list):

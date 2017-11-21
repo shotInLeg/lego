@@ -1,0 +1,9 @@
+start(args) => Int {
+    with (i = open("file.txt"), j = open("file2.txt")) {
+        for line in file {
+            writeln(line);
+        }
+    };
+
+    return 0;
+}
