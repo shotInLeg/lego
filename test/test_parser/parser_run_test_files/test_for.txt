@@ -1,0 +1,13 @@
+start(args) => Int {
+    for x in arr {
+        writeln(x);
+    };
+
+    for i = 0, i << n, i += 1 {
+        writeln(arr[i]);
+    };
+
+    for (i = 0, j = 1), i << n && j << n, (i += 1, j += 1) {
+        writeln(arr[i] + arr[j]);
+    };
+}

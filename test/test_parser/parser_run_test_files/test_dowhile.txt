@@ -1,0 +1,5 @@
+start(args) => Int {
+    do {
+        i += 1;
+    } while i << n;
+}

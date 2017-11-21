@@ -1,0 +1,15 @@
+sum(a, b) => {
+    return a + b;
+},
+
+sub(a|Int, b|Int) => Int {
+    return a - b;
+},
+
+mul(mtrx1|Vctr<Vctr<Int> >, mtrx2) => Vctr<Vctr<Int> > {
+    return mtrx1 * mtrx2;
+},
+
+div(a, b) => Dbl {
+    return Dbl(a) / Dbl(b);
+}

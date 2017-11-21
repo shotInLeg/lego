@@ -1,0 +1,10 @@
+start(args) => Int {
+    with file = open("file.txt", "w") {
+        file.writeln("text");
+    };
+
+    with (file1 = open("file.txt"), file2 = open("file2.txt", "w")) {
+        txt = file1.readln();
+        file2.writeln(txt);
+    };
+}

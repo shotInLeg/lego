@@ -1,9 +1,6 @@
 start(args) => Int {
-    with (i = open("file.txt"), j = open("file2.txt")) {
-        for line in file {
-            writeln(line);
-        }
-    };
-
+    a = 5;
+    b = 6;
+    c = -5 + (-a) + (-b);
     return 0;
 }

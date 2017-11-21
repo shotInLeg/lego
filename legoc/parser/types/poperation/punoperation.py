@@ -58,3 +58,9 @@ class PUnOperation(POperation):
         exp = PExpression()
         exp.child = self
         return exp
+
+    def __str__(self):
+        return '{{{}{}}}'.format(
+            self.str_value,
+            self.arg
+        )
