@@ -7,6 +7,23 @@ from legoc.parser.types import *
 
 
 class TestParser(TestCase):
+    def test_try(self):
+        test_data_file = os.path.join(
+            os.path.dirname(__file__),
+            'parser_run_test_files',
+            'test_try.txt'
+        )
+
+        lexer = Lexer()
+        ltokens = lexer.run(test_data_file)
+
+        parser = Parser()
+        ptokens = parser.parse_file(ltokens)
+
+        for token in ptokens:
+            print(token)
+        print()
+
     def test_with(self):
         test_data_file = os.path.join(
             os.path.dirname(__file__),

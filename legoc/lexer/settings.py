@@ -22,8 +22,6 @@ regexp = {
     re.compile(r'^priv$'): ('lmodifier', lmodifier_priority),
     re.compile(r'^prot$'): ('lmodifier', lmodifier_priority),
     re.compile(r'^publ$'): ('lmodifier', lmodifier_priority),
-    re.compile(r'^read$'): ('lmodifier', lmodifier_priority),
-    re.compile(r'^write$'): ('lmodifier', lmodifier_priority),
     re.compile(r'^clr'): ('lmodifier', lmodifier_priority),
 
     re.compile(r'^[a-z]$'): ('lname', lname_priority),
@@ -78,10 +76,10 @@ regexp = {
     re.compile(r'^do$'): ('loperator', loperator_priority),
     re.compile(r'^with$'): ('loperator', loperator_priority),
     re.compile(r'^return$'): ('loperator', loperator_priority),
-    re.compile(r'^throw'): ('loperator', loperator_priority),
-    re.compile(r'^try'): ('loperator', loperator_priority),
-    re.compile(r'^catch'): ('loperator', loperator_priority),
-    re.compile(r'^finally'): ('loperator', loperator_priority),
+    re.compile(r'^throw$'): ('loperator', loperator_priority),
+    re.compile(r'^try$'): ('loperator', loperator_priority),
+    re.compile(r'^catch$'): ('loperator', loperator_priority),
+    re.compile(r'^finally$'): ('loperator', loperator_priority),
     re.compile(r'^[,]$'): ('loperator', loperator_priority),
     re.compile(r'^[;]$'): ('loperator', loperator_priority),
 
@@ -102,6 +100,7 @@ regexp = {
         ('lconstant', lconstant_priority),  # number (1_000.)
 
     re.compile(r'^\".*\"$'): ('lconstant', lconstant_priority),  # string
+    re.compile(r'^\'.*\'$'): ('lconstant', lconstant_priority),  # insertion
 
     re.compile(r'^true$'): ('lconstant', lconstant_priority),  # bool
     re.compile(r'^false$'): ('lconstant', lconstant_priority),  # bool

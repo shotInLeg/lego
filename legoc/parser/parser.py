@@ -179,6 +179,9 @@ class Parser(BaseParser):
         elif ltoken[0].str_value == 'with':
             return self.parse_with(ltoken)
 
+        elif ltoken[0].str_value == 'try':
+            return self.parse_try(ltoken)
+
     def parse_if(self, tokens):
         cond_cntxts = self.split(tokens[1::], LOperator('elif'))
 
@@ -257,6 +260,43 @@ class Parser(BaseParser):
             return PWith(exp.get_list(), context)
         else:
             return PWith([exp.get()], context)
+
+    def parse_try(self, tokens):
+        cond_cntxts = self.split(tokens[1::], LOperator('catch'))
+
+        have_finally = False
+        if self.is_in(cond_cntxts[-1], LOperator('finally')):
+            last = cond_cntxts.pop(-1)
+            parts = self.split(last, LOperator('finally'))
+            cond_cntxts.extend(parts)
+            have_finally = True
+
+        ptry = None
+        for i, part in enumerate(cond_cntxts):
+            # try { ... }
+            if i == 0:
+                cntx = self.parse_exp(part)
+                ptry = PTry(cntx)
+                continue
+
+            # finally { ... }
+            if i == len(cond_cntxts)-1 and have_finally:
+                cntx = self.parse_exp(part)
+                pfinally = PFinally(cntx)
+                ptry.add(pfinally)
+                break
+
+            # catch( ... ) { ... }
+            params_tokens, end = self.cut_on_token(part, LOpenBracket('{'))
+            context_tokens = part[end::]
+
+            params = self.parse_exp(params_tokens)
+            context = self.parse_exp(context_tokens)
+
+            pcatch = PCatch(params, context)
+            ptry.add(pcatch)
+
+        return ptry.get()
 
     def parser_cbrackets(self, start, tokens):
         from_brackets, end = self.from_brackets(

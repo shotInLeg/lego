@@ -1,0 +1,32 @@
+start(args) => Int {
+    try {
+        writeln("try");
+    };
+
+    try {
+        writeln("try");
+    }
+    catch ex|Excp {
+        writeln("catch");
+    };
+
+    try {
+        writeln("try");
+    }
+    finally {
+        writeln("finally");
+    };
+
+    try {
+        writeln("try");
+    }
+    catch ex|InvlArg {
+        writeln("catch");
+    }
+    catch ex|TypeErr {
+        writeln("catch");
+    }
+    finally {
+        writeln("finally");
+    }
+}
