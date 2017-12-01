@@ -36,6 +36,34 @@ class Parser(BaseParser):
 
         return result
 
+    def parse_init_list(self, tokens):
+        file_instrs = self.split(tokens, LOperator(','))
+
+        result = []
+        for instr in file_instrs:
+            # Выражения инициализации
+            if isinstance(instr[0], LModifier) or \
+                    isinstance(instr[0], LName) or \
+                    isinstance(instr[0], LType):
+
+                if self.is_in(instr, LOperation('=')) or \
+                        self.is_in(instr, LOperation('=>')):
+                    reduced = self.parse_init(instr)
+                else:
+                    raise ValueError('Ожидалось объявление')
+
+            else:
+                raise ValueError('Неожиданный элемент `{}` ожидался: `{}`'.format(
+                    instr[0],
+                    ' или '.join(
+                        ['Ключевое слово', 'Модификатор', 'Имя', 'Имя типа']
+                    )
+                ))
+
+            result.append(reduced)
+
+        return result
+
     def parse_decl(self, ltokens):
         # Обработка ключевых слов
         return None
@@ -221,22 +249,21 @@ class Parser(BaseParser):
         cond_tokens, end = self.cut_on_token(tokens, LOpenBracket('{'), 1)
         cntx_tokens = tokens[end::]
 
-        cond_tokens = self.replace(cond_tokens, LOperator(','), LOperator(';'))
-        cond_tokens.insert(0, LOpenBracket('{'))
-        cond_tokens.append(LCloseBracket('}'))
-
-        cond = self.parse_exp(cond_tokens)
+        cond_tokens = self.split(cond_tokens, LOperator(';'))
         context = self.parse_exp(cntx_tokens)
 
         # for x in arr { ... }
-        if len(cond.child) == 1:
-            return PForEach(cond.child[0], context)
+        if len(cond_tokens) == 1:
+            cond = self.parse_exp(cond_tokens[0])
+            return PForEach(cond, context)
 
         # for i = 0; i < N; i += 1 { ... }
-        elif len(cond.child) == 3:
-            start = cond.child[0].get_list() if isinstance(cond.child[0], PCBrackets) else [cond.child[0]]
-            step = cond.child[2].get_list() if isinstance(cond.child[2], PCBrackets) else [cond.child[2]]
-            return PFor(start, cond.child[1], step, context)
+        elif len(cond_tokens) == 3:
+            start_tokens, cond_tokens, step_tokens = cond_tokens
+            start = self.parse_init_list(start_tokens)
+            cond = self.parse_exp(cond_tokens)
+            steps = [self.parse_exp(x) for x in self.split(step_tokens, LOperator(','))]
+            return PFor(start, cond, steps, context)
 
         else:
             raise ValueError('Неизветный список параметров цикла for `{}`'.format(

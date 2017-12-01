@@ -103,13 +103,23 @@ class BaseParser(object):
         return result
 
     def is_balanced(self, tokens):
-        brackets = {'()': 0, '[]': 0, '{}': 0, '<>': 0}
+        brackets = {'()': 0, '[]': 0, '{}': 0, '<>': 0,
+                    'for': 0, 'with': 0}
 
+        operator = ''
         for tkn in tokens:
             if isinstance(tkn, LOpenBracket) and tkn.pair() in brackets:
                 brackets[tkn.pair()] += 1
+                if tkn.pair() == '{}' and operator:
+                    brackets[operator] -= 1
+                    operator = ''
+
             elif isinstance(tkn, LCloseBracket) and tkn.pair() in brackets:
                 brackets[tkn.pair()] -= 1
+
+            elif isinstance(tkn, LOperator) and tkn.str_value in brackets:
+                operator = tkn.str_value
+                brackets[operator] += 1
 
         for count in brackets.values():
             if count != 0:

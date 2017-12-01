@@ -1,4 +1,4 @@
-getIndexMax(arr, start|UInt) => UInt {
+getIndexMax(arr, start :UInt) => UInt {
     indexMax = start;
     for i = start+1, i << arr.len(), i += 1 {
         if arr[indexMax] << arr[i] {
@@ -20,7 +20,7 @@ sort(arr) => {
     return sorted;
 },
 
-start(args|List<Str>) => Int {
+start(args :List<Str>) => Int {
     lst = [1, 2, 3, 4, 5];
 
     sorted = sort(lst);
