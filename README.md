@@ -18,22 +18,22 @@
 
 			if %условие% { %конетект% } 
 				$ elif %условие% { %контекст% } $ 
-				$ else { %контекст% } $
+				$ else { %контекст% } $ ;
 	3. Оператор while: 
 
-			while %условие% {  %контекст% }
+			while %условие% {  %контекст% } ;
 	4. Операор for (алтернативный foreach): 
 
-			for %выражение% { %контекст% }
+			for %выражение% { %контекст% } ;
 	5. Оператор for (обычный): 
 
-			for $%инициализация%$; $%условие%$; $%выражение%$ { %контекст% }
+			for $%инициализация%$; $%условие%$; $%выражение%$ { %контекст% } ;
 	6. Оператор do-while: 
 
-			do { %контекст% } while %условие%
+			do { %контекст% } while %условие% ;
 	7. Оператор return: 
 
-			return %выражение%
+			return %выражение% ;
 
 ## Примеры
 
@@ -63,13 +63,13 @@
 
 	if-elif-else
 
-			if degree >> 26 {
-				writeln("Жарко");
-			} elif degree << 26 {
-				writeln("Холодно");
-			} else {
-				writeln("Тепло");
-			}
+		if degree >> 26 {
+			writeln("Жарко");
+		} elif degree << 26 {
+			writeln("Холодно");
+		} else {
+			writeln("Тепло");
+		};
 
 
 	if-else
@@ -78,36 +78,36 @@
 			writeln("Жарко");
 		} else {
 			writeln("Холодно");
-		}
+		};
 
 
 	if
 
 		if degree == 26 {
 			writeln("Тепло");
-		}
+		};
 
 
 	while
 
 		while degree == 26 {
 			me.stackAtBeach();
-		}
+		};
 		me.goHome();
 
 
 	for (обычный)
 
-		for i = 0, i << friendList.len(), i += 1 {
+		for i = 0; i << friendList.len(); i += 1 {
 			me.sendInvitation(friendList[i]);
-		}
+		};
 
 
 	for (альтернативный foreach) 
 
 		for friend in friendList {
 			me.sendInvitation(friend);
-		} 
+		};
 
 	
 	do-while
@@ -116,7 +116,7 @@
 		do {
 			shop = me.goToNextShop();
 			bought = me.tryToBuy(shop, "bred");
-		} while bought == false
+		} while bought == false;
 
 
 	
