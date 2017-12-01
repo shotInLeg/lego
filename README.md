@@ -65,9 +65,11 @@
 
 		if degree >> 26 {
 			writeln("Жарко");
-		} elif degree << 26 {
+		}
+		elif degree << 26 {
 			writeln("Холодно");
-		} else {
+		}
+		else {
 			writeln("Тепло");
 		};
 
@@ -76,7 +78,8 @@
 
 		if degree >> 26 {
 			writeln("Жарко");
-		} else {
+		}
+		else {
 			writeln("Холодно");
 		};
 
@@ -116,7 +119,8 @@
 		do {
 			shop = me.goToNextShop();
 			bought = me.tryToBuy(shop, "bred");
-		} while bought == false;
+		}
+		while bought == false;
 
 
 	
