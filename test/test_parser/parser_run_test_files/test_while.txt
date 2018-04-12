@@ -1,5 +1,0 @@
-start(args) => Int {
-    while i << n {
-        i += 1;
-    };
-}
